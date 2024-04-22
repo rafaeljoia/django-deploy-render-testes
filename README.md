@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # django-deploy-render-testes
 =======
 # Deploy a Django App on Render
@@ -15,4 +14,4 @@ Fork the repo and use the button below to deploy this app with one click.
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 To deploy manually, see the guide at https://docs.render.com/deploy-django.
->>>>>>> master
+
