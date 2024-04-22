@@ -1,31 +1,69 @@
-<!doctype html>
-{% load static %}
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Hello Django on Render!</title>
-
-    <link rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-            crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Theme</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Personalize aqui conforme necessário */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .jumbotron {
+      background-color: #007bff;
+      color: #fff;
+      padding: 100px 0;
+      margin-bottom: 0;
+    }
+    .feature {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 60px;
+      color: #007bff;
+    }
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<header class="container mt-4 mb-4">
-    <a href="https://render.com">
-        <img src="{% static "render/render.png" %}" alt="Render" class="mw-100">
-    </a>
-</header>
-<main class="container">
-    <div class="row text-center justify-content-center">
-        <div class="col">
-            <h1 class="display-4">Hello World! RENDER Template</h1>
-        </div>
+
+  <div class="jumbotron text-center">
+    <h1>Tech Theme</h1>
+    <p>Um exemplo de tema usando Bootstrap</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 feature">
+        <i class="fas fa-laptop-code feature-icon"></i>
+        <h3>Desenvolvimento Web</h3>
+        <p>Construa sites e aplicativos web incríveis com as mais recentes tecnologias.</p>
+      </div>
+      <div class="col-md-4 feature">
+        <i class="fas fa-mobile-alt feature-icon"></i>
+        <h3>Desenvolvimento Mobile</h3>
+        <p>Crie aplicativos móveis responsivos e elegantes para iOS e Android.</p>
+      </div>
+      <div class="col-md-4 feature">
+        <i class="fas fa-cloud feature-icon"></i>
+        <h3>Computação em Nuvem</h3>
+        <p>Hospede seus aplicativos e dados na nuvem para escalabilidade e flexibilidade.</p>
+      </div>
     </div>
-</main>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 Tech Theme. Todos os direitos reservados.</p>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
