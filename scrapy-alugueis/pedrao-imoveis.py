@@ -1,6 +1,8 @@
 import time
 import requests
 
+from ..render.models import Imovel
+
 def fetch_property_data(url, headers, payload):
     try:
         response = requests.post(url, headers=headers, json=payload)
