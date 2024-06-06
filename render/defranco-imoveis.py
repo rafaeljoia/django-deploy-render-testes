@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import httpx
 
-from ..render.models import Imovel
+from render.models import Imovel
 
 
 

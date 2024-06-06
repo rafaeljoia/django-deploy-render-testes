@@ -14,8 +14,8 @@ python manage.py migrate
 
 python manage.py createsu
 
-python scrapy-alugueis/pedrao-imoveis.py
-python scrapy-alugueis/defranco-imoveis.py
+python render/pedrao-imoveis.py
+python render/defranco-imoveis.py
 
 
 
