@@ -13,8 +13,8 @@ python manage.py migrate
 
 python manage.py createsu
 
-# Executar o script defranco-imoveis.py
-python scrapy-alugueis/defranco-imoveis.py
+python scrapy-aluguel/pedrao-imoveis.py
+python scrapy-aluguel/defranco-imoveis.py
 
-# Executar o script pedrao-imoveis.py
-python scrapy-alugueis/pedrao-imoveis.py
+
+
