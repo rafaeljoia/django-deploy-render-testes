@@ -14,8 +14,8 @@ python manage.py migrate
 
 python manage.py createsu
 
-python manage.py pedrao-imoveis.py
-python manage.py defranco-imoveis.py
+python manage.py pedrao-imoveis
+python manage.py defranco-imoveis
 
 
 
