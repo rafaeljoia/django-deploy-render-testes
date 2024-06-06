@@ -11,5 +11,5 @@ sqlparse==0.4.4
 uvicorn==0.27.0.post1
 whitenoise==6.6.0
 beautifulsoup4==4.10.0
-requests==2.26.0
-httpx==0.19.0
+requests
+httpx
