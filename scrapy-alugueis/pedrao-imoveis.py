@@ -26,13 +26,17 @@ def parse_property_data(dados):
     return properties
 
 def save_property_data(properties):
-    # Implemente aqui a lógica para salvar os dados (por exemplo, salvar em um arquivo CSV ou banco de dados)
-    for property in properties:
-        print("Imobiliaria:", property["Imobiliaria"])
-        print("Tipo:", property["Tipo"])
-        print("Bairro:", property["Bairro"])
-        print("Valor:", property["Valor"])
-        print("==========")
+    try:
+        imovel = Imovel(
+            imobiliaria=property["Imobiliaria"],
+            tipo=property["Tipo"],
+            bairro=property["Bairro"],
+            valor=property["Valor"]
+        )
+        imovel.save()
+        print(f"Imóvel salvo: {imovel}")
+    except Exception as e:
+        print(f"Erro ao salvar o imóvel: {e}")
 
 def main():
     url = "https://waysoft.net.br/apiapp/API-IMOB/api/buscar-im/9291f67888d4058261e3d36ff6b12ad5"
