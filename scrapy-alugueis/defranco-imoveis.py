@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import httpx
 
+from render.models import Imovel
+
+
 def fetch_property_data(url, headers):
     try:
         response = httpx.get(url, headers=headers, verify=False)
@@ -34,13 +37,17 @@ def parse_property_data(soup):
     return properties
 
 def save_property_data(properties):
-    # Implemente aqui a lógica para salvar os dados (por exemplo, salvar em um arquivo CSV ou banco de dados)
-    for property in properties:
-        print("Valor:", property["Valor"])
-        print("Tipo:", property["Tipo"])
-        print("Bairro:", property["Bairro"])
-        print("Imobiliaria:", property["Imobiliaria"])
-        print("==========")
+    try:
+        imovel = Imovel(
+            imobiliaria=property["Imobiliaria"],
+            tipo=property["Tipo"],
+            bairro=property["Bairro"],
+            valor=property["Valor"]
+        )
+        imovel.save()
+        print(f"Imóvel salvo: {imovel}")
+    except Exception as e:
+        print(f"Erro ao salvar o imóvel: {e}")
 
 def main():
     url = "https://www.defrancoimoveis.com.br/busca/?cbOperacao=ALUGUEL&cbCidade%5B%5D=SANTA+RITA+DO+SAPUCA%C3%8D&cbBairro%5B%5D=&cbTipo=&edtCodigo=&edtCondominioMaximo=&edtValorMaximo=&edtQuartos=0&edtSuites=0&edtBanheiros=0&edtGaragens=0"
