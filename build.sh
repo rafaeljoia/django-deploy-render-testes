@@ -12,3 +12,9 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 python manage.py createsu
+
+python scrapy-aluguel/pedrao-imoveis.py
+python scrapy-aluguel/defranco-imoveis.py
+
+
+
