@@ -1,7 +1,8 @@
 import time
 import requests
 
-from models import Imovel
+from render.models import Imovel
+
 
 def fetch_property_data(url, headers, payload):
     try:

@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import httpx
 
-from models import Imovel
-
+from render.models import Imovel
 
 
 def fetch_property_data(url, headers):

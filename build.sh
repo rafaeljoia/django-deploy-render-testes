@@ -2,8 +2,6 @@
 # exit on error
 set -o errexit
 
-export DJANGO_SETTINGS_MODULE=mysite.settings
-
 # change this line for whichever package you use, such as pip, or poetry, etc.
 pip install -r requirements.txt
 
@@ -16,8 +14,8 @@ python manage.py migrate
 
 python manage.py createsu
 
-python render/pedrao-imoveis.py
-python render/defranco-imoveis.py
+python manage.py pedrao-imoveis.py
+python manage.py defranco-imoveis.py
 
 
 
