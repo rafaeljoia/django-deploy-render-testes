@@ -44,17 +44,18 @@ class Command(BaseCommand):
         return properties
 
     def save_property_data(self, properties):
-        try:
-            imovel = Imovel(
-                imobiliaria=property["Imobiliaria"],
-                tipo=property["Tipo"],
-                bairro=property["Bairro"],
-                valor=property["Valor"]
-            )
-            imovel.save()
-            print(f"Imóvel salvo: {imovel}")
-        except Exception as e:
-            print(f"Erro ao salvar o imóvel: {e}")
+        for property in properties:
+            try:
+                imovel = Imovel(
+                    imobiliaria=property["Imobiliaria"],
+                    tipo=property["Tipo"],
+                    bairro=property["Bairro"],
+                    valor=property["Valor"]
+                )
+                imovel.save()
+                print(f"Imóvel salvo: {imovel}")
+            except Exception as e:
+                print(f"Erro ao salvar o imóvel: {e}")
 
     def start_collect(self):
         url = "https://www.defrancoimoveis.com.br/busca/?cbOperacao=ALUGUEL&cbCidade%5B%5D=SANTA+RITA+DO+SAPUCA%C3%8D&cbBairro%5B%5D=&cbTipo=&edtCodigo=&edtCondominioMaximo=&edtValorMaximo=&edtQuartos=0&edtSuites=0&edtBanheiros=0&edtGaragens=0"

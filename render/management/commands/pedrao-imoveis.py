@@ -34,17 +34,18 @@ class Command(BaseCommand):
         return properties
 
     def save_property_data(self,properties):
-        try:
-            imovel = Imovel(
-                imobiliaria=property["Imobiliaria"],
-                tipo=property["Tipo"],
-                bairro=property["Bairro"],
-                valor=property["Valor"]
-            )
-            imovel.save()
-            print(f"Imóvel salvo: {imovel}")
-        except Exception as e:
-            print(f"Erro ao salvar o imóvel: {e}")
+        for property in properties:
+            try:
+                imovel = Imovel(
+                    imobiliaria=property["Imobiliaria"],
+                    tipo=property["Tipo"],
+                    bairro=property["Bairro"],
+                    valor=property["Valor"]
+                )
+                imovel.save()
+                print(f"Imóvel salvo: {imovel}")
+            except Exception as e:
+                print(f"Erro ao salvar o imóvel: {e}")
 
     def start_collect(self):
         url = "https://waysoft.net.br/apiapp/API-IMOB/api/buscar-im/9291f67888d4058261e3d36ff6b12ad5"
